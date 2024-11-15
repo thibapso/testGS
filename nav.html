@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/nav.css" />
+    <title>Navbar com Dropdown e Hambúrguer</title>
+  </head>
+  <body id="navPage">
+    <nav class="navbar">
+      <a href="#" class="brand">MinhaMarca</a>
+      <div class="itens">
+        <ul class="nav-menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li class="dropdown">
+            <a href="#">Serviços</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Serviço 1</a></li>
+              <li><a href="#">Serviço 2</a></li>
+              <li><a href="#">Serviço 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+        <a href="#" class="hamburger" onclick="openPage()">&#9776;</a>
+      </div>
+    </nav>
+    <div id="overlay"></div>
+    <script src="assets/js/nav.js"></script>
+  </body>
+</html>

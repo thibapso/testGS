@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+html {
+     background-color: #1b1b1b;
+     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+header {
+     z-index: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 2rem;
+     position: fixed;
+     top: 2%;
+     left: 50%;
+     transform: translateX(-50%);
+}
+
+
+.nav {
+     display: flex;
+     justify-content: center;
+     width: 18rem;
+     background: rgba(255, 255, 255, 0.05);
+     backdrop-filter: blur(5.5px);
+     -webkit-backdrop-filter: blur(5.5px);
+     border-radius: 50px;
+     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav ul {
+     display: flex;
+     list-style: none;
+     padding: 0;
+     gap: 1rem;
+}
+
+.nav ul li a {
+     font-size: 0.85rem;
+     font-weight: 600;
+     justify-content: space-around;
+     text-decoration: none;
+     color: #f1f1f1;
+     padding: 0.5rem 0.75rem;
+}
+
+.nav ul li a:hover {
+     background-color: rgb(90, 221, 117);
+     border-radius: 50px;
+}
+
+main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 5rem 0;
+}
+
+.container {
+     border: 1px solid #ddd;
+     padding: 10px;
+     margin: 10px;
+     width: 300px;
+     border-radius: 8px;
+}
+
+.header {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+}
+
+.icon {
+     position: relative;
+     width: 2.354rem;
+     height: 2.354rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.icon::before,
+.icon::after {
+     content: "";
+     position: absolute;
+     background-color: rgb(90, 221, 117);
+     transition: transform 0.3s ease;
+     /* Transição mais rápida */
+}
+
+.icon::before {
+     width: 2.354rem;
+     /* Linha horizontal */
+     height: 0.3rem;
+     /* Espessura da linha */
+}
+
+.icon::after {
+     width: 0.3rem;
+     /* Linha vertical */
+     height: 2.354rem;
+     /* Altura da linha */
+}
+
+.icon.rotated::before {
+     transform: rotate(0deg);
+     /* Mantém a linha horizontal */
+}
+
+.icon.rotated::after {
+     transform: rotate(90deg);
+     /* Gira a linha vertical para horizontal */
+}
+
+
+.content {
+     display: none;
+     /* Começa escondido */
+     margin-top: 10px;
+}
