@@ -81,42 +81,60 @@ main {
      align-items: center;
 }
 
-.icon::before,
-.icon::after {
-     content: "";
-     position: absolute;
-     background-color: rgb(90, 221, 117);
-     transition: transform 0.3s ease;
-     /* Transição mais rápida */
-}
-
-.icon::before {
-     width: 2.354rem;
-     /* Linha horizontal */
-     height: 0.3rem;
-     /* Espessura da linha */
-}
-
-.icon::after {
-     width: 0.3rem;
-     /* Linha vertical */
-     height: 2.354rem;
-     /* Altura da linha */
-}
-
-.icon.rotated::before {
-     transform: rotate(0deg);
-     /* Mantém a linha horizontal */
-}
-
-.icon.rotated::after {
-     transform: rotate(90deg);
-     /* Gira a linha vertical para horizontal */
-}
-
-
 .content {
      display: none;
      /* Começa escondido */
      margin-top: 10px;
+}
+
+/* Estilo do botão "Voltar ao topo" */
+.back-to-top {
+     width: 4rem;
+     height: 4rem;
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background-color: rgb(90, 221, 117);
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     font-size: 1.5rem;
+     border-radius: 8px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     /* Alinha a seta verticalmente */
+     justify-content: center;
+     /* Alinha a seta horizontalmente */
+     opacity: 0;
+     /* Começa invisível */
+     transform: translateY(20px);
+     /* Começa com um deslocamento */
+     transition: opacity 0.3s ease, transform 0.3s ease;
+     /* Efeito suave */
+}
+
+/* Torna o botão visível quando a classe 'show' é adicionada */
+.back-to-top.show {
+     display: flex;
+     /* Garante que o botão seja flexível */
+     opacity: 1;
+     transform: translateY(0);
+     /* Anima a posição */
+}
+
+/* Estilo da seta */
+.seta {
+     padding-top: 5px;
+     font-size: 2.5rem;
+     /* Ajuste o tamanho da seta */
+}
+
+.back-to-top:hover {
+     background-color: rgb(70, 180, 90);
+     /* Muda a cor no hover */
+     transform: translateY(-5px);
+     /* Move o botão um pouco para cima */
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+     /* Adiciona sombra no hover */
 }
